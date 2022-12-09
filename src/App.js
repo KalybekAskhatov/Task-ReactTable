@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/header/Navbar";
+import Table3 from "./components/section/Table3";
+import Footer from "./components/footer/footer";
 
-function App() {
+const App = () => {
+  const objUsers = [
+    {
+      name: "Kalybek",
+      lastName: "Askhatov",
+      age: 22,
+      id: 1,
+    },
+    {
+      name: "Азирек",
+      lastName: "Эмирова",
+      age: 24,
+      id: 2,
+    },
+    {
+      name: "Эмир",
+      lastName: "Азиреков",
+      age: 26,
+      id: 3,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      {objUsers.map((item) => {
+        return (
+          <Table3
+            name={item.name}
+            lastName={item.lastName}
+            age={item.age}
+            id={item.id}
+          />
+        );
+      })}
+      {/* <Table3
+        name={objUsers.name}
+        lastName={objUsers.lastName}
+        age={objUsers.age}
+        id={objUsers.id}
+      /> */}
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
