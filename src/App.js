@@ -13,14 +13,14 @@ const App = () => {
       id: 1,
     },
     {
-      name: "Азирек",
+      name: "Айзирек",
       lastName: "Эмирова",
       age: 24,
       id: 2,
     },
     {
       name: "Эмир",
-      lastName: "Азиреков",
+      lastName: "Айзиреков",
       age: 26,
       id: 3,
     },
